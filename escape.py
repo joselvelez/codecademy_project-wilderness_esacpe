@@ -35,7 +35,7 @@ class TreeNode:
 # VARIABLES FOR TREE
 ######
 user_choice = input("What is your name? ")
-print(user_choice)
+print("\nAlright {name}, lets get you started on your jouney!\n".format(name=user_choice))
 ######
 # TESTING AREA
 ######
@@ -46,4 +46,12 @@ choice_a = TreeNode("'''\nThe bear is startled and runs away.\nDo you:\n1 ) Shou
 story_root.add_child(choice_a)
 choice_b = TreeNode("'''\nYou come across a clearing full of flowers. The bear follows you and asks 'what gives?'\nDo you:\n1 ) Gasp 'A talking bear!'\n2 ) Explain that the bear scared you.\n'''")
 story_root.add_child(choice_b)
+choice_a1 = TreeNode("""\nThe bear returns and tells you it's been a rough week. After making peace with a talking bear, he shows you the way out of the forest.\n\nYOU HAVE ESCAPED THE WILDERNESS.\n""")
+choice_a.add_child(choice_a1)
+choice_a2 = TreeNode("""\nThe bear returns and tells you that bullying is not okay before leaving you alone in the wilderness.\n\nYOU REMAIN LOST.\n""")
+choice_a.add_child(choice_a2)
+choice_b1 = TreeNode("""\nThe bear is unamused. After smelling the flowers, it turns around and leaves you alone.\n\nYOU REMAIN LOST.\n""")
+choice_b.add_child(choice_b1)
+choice_b2 = TreeNode("""\nThe bear understands and apologizes for startling you. Your new friend shows you a path leading out of the forest.\n\nYOU HAVE ESCAPED THE WILDERNESS.\n""")
+choice_b.add_child(choice_b2)
 story_root.traverse()
